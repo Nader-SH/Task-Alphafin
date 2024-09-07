@@ -1,16 +1,15 @@
 import Header from "../components/Header";
-import PageCards from "../components/Card";
+// import PageCards from "../components/Card";
 import Footer from "../components/Footer";
 
-const LandingPage = () => {
+const AboutPage = () => {
     return (
         <nav className="bg-white shadow-md">
             <Header />
-            <PageCards />
             <Footer />
         </nav>
     );
 }
 
 
-export default LandingPage;
+export default AboutPage;

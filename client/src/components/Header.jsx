@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { useState } from 'react';
 import logo from "../public/logo.svg"
@@ -21,17 +22,12 @@ const Header = () => {
     ];
     return (
         <header className=" text-gray-800 px-6 py-4 flex justify-between items-center">
-            {/* Logo */}
             <div className="text-2xl font-bold flex-shrink-0 flex items-center" style={{ margin: "0px 30px" }}>
                 <img src={logo} height="90" width='90' class="h-8 w-auto" alt='logo' />
             </div>
-
-            {/* Navigation Links */}
             <nav className="flex space-x-6">
                 <a href="/" className="hover:text-gray-400">Home</a>
                 <a href="/about" className="hover:text-gray-400">About Us</a>
-
-                {/* Services Dropdown */}
                 <div className="relative">
                     <button onClick={toggleDropdown} className="hover:text-gray-400 flex items-center">
                         Services
@@ -42,18 +38,15 @@ const Header = () => {
                     {dropdownOpen && (
                         <ul className="absolute bg-white text-gray-800 mt-2 w-80 shadow-lg rounded-lg">
                             {services.map((service, index) => (
-                                <li key={index} className="py-2 px-4 hover:bg-gray-100">
+                                <li key={index} className="py-2 px-4 hover:bg-gray-100 opacity-100">
                                     <a href="#">{service}</a>
                                 </li>
                             ))}
                         </ul>
                     )}
                 </div>
-
                 <a href="/faqs" className="hover:text-gray-400">FAQs</a>
             </nav>
-
-            {/* Contact Us Button */}
             <a href="/contact" className="ml-auto bg-gray-800  text-white py-2 px-4 rounded hover:bg-gray-700 ">
                 Contact Us
             </a>

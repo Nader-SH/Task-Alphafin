@@ -38,7 +38,7 @@ const PageCards = () => {
                         backgroundImage: `url(${image})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        transform: isZoomedIn ? 'scale(1)' : 'scale(1.1)',  // Slightly reduced zoom for smoother effect
+                        transform: isZoomedIn ? 'scale(1)' : 'scale(1.5)',  // Slightly reduced zoom for smoother effect
                         transition: 'transform 1.5s ease-in-out, opacity 2.5s ease-in-out',  // Smooth and subtle transition
                     }}
                 />
@@ -48,7 +48,7 @@ const PageCards = () => {
                 <p className="text-xs md:text-xs mb-8 text-center max-w-xl">
                     We are committed to provide accessible and reliable financial services to help individuals and families.
                 </p>
-                <button size="lg" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-10 rounded-md px-8 bg-white text-black hover:bg-gray-200">
+                <button size="lg" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-10 rounded-md px-8 bg-white text-black hover:text-white hover:bg-gray-700">
                     Get Started
                 </button>
             </div>
