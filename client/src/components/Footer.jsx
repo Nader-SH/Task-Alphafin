@@ -53,8 +53,6 @@ const Footer = () => {
                         </form>
                     </div>
                 </div>
-
-                {/* Footer Bottom */}
                 <div className="text-center mt-8 border-t border-gray-700 pt-6">
                     <p className="text-sm">&copy; 2029 All rights reserved.</p>
                 </div>

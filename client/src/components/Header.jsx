@@ -23,7 +23,7 @@ const Header = () => {
     return (
         <header className=" text-gray-800 px-6 py-4 flex justify-between items-center">
             <div className="text-2xl font-bold flex-shrink-0 flex items-center" style={{ margin: "0px 30px" }}>
-                <img src={logo} height="90" width='90' class="h-8 w-auto" alt='logo' />
+                <img src={logo} height="90" width='90' className="h-8 w-auto" alt='logo' />
             </div>
             <nav className="flex space-x-6">
                 <a href="/" className="hover:text-gray-400">Home</a>

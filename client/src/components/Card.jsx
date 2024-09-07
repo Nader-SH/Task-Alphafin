@@ -21,8 +21,8 @@ const PageCards = () => {
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
                 setIsZoomedIn(false)
-            }, 2500)  // Zoom effect duration
-        }, 4000) // Slide change duration
+            }, 1500)  // Zoom effect duration
+        }, 4000) // Image change duration
 
         return () => clearInterval(intervalId)
     }, [])
@@ -35,11 +35,11 @@ const PageCards = () => {
                     className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                         }`}
                     style={{
-                        backgroundImage: `url(${image})`,
+                        backgroundImage: `url(${image})`, 
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        transform: isZoomedIn ? 'scale(1)' : 'scale(1.5)',  // Slightly reduced zoom for smoother effect
-                        transition: 'transform 1.5s ease-in-out, opacity 2.5s ease-in-out',  // Smooth and subtle transition
+                        transform: isZoomedIn ? 'scale(1.5)' : 'scale(1)',
+                        transition: 'transform 1.5s ease-in-out, opacity 1.5s ease-in-out',
                     }}
                 />
             ))}
@@ -48,7 +48,7 @@ const PageCards = () => {
                 <p className="text-xs md:text-xs mb-8 text-center max-w-xl">
                     We are committed to provide accessible and reliable financial services to help individuals and families.
                 </p>
-                <button size="lg" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-10 rounded-md px-8 bg-white text-black hover:text-white hover:bg-gray-700">
+                <button size="lg" className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-10 rounded-md px-8 bg-white text-black hover:bg-gray-200">
                     Get Started
                 </button>
             </div>
