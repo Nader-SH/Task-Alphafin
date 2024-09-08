@@ -53,6 +53,16 @@ const cardData = [
         description: "We offer specialized expat loan services designed to meet the unique needs of expatriates.",
         icon: icon2,
     },
+    {
+        title: "Asset Finance",
+        description: "We offer tailored asset and vehicle finance solutions to help you acquire the equipment or vehicle you need with ease.",
+        icon: icon1,
+    },
+    {
+        title: "Expat Loans",
+        description: "We offer specialized expat loan services designed to meet the unique needs of expatriates.",
+        icon: icon2,
+    },
 ];
 
 const images = [
@@ -77,16 +87,17 @@ const OurServices = () => {
                 <img src={imageshape} height={80} width={80} alt="shape" className="m-6" />
                 <h2 className="text-center text-3xl font-bold">Our Services</h2>
             </div>
-            <div className="flex flex-wrap min-w-[400px]">
-                <div className="flex-1 min-w-[300px]">
+            <div className="flex flex-wrap w-full">
+                {/* Services Section - 2/3 of the page */}
+                <div className="w-full lg:w-2/3">
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                         {cardData.map((card, index) => (
-                            <div key={index} className="bg-white p-6  shadow-md m-4 border-b-4 rounded-lg border-orange-500 flex items-start">
+                            <div key={index} className="bg-white p-6 shadow-md m-4 border-b-4 rounded-lg border-orange-500 flex items-start">
                                 <div className="flex-1">
                                     <div className='flex font-bold mb-2 border-b-2'>
                                         <img src={card.icon} alt="icon" className="w-12 h-12 mr-4" />
                                         <h2 className="text-xl border-black-800 pb-2 flex items-center">
-                                        {card.title}
+                                            {card.title}
                                         </h2>
                                     </div>
                                     <p className="mb-4">{card.description}</p>
@@ -96,15 +107,17 @@ const OurServices = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative flex-1 flex flex-col items-center justify-center p-6 min-w-[300px]">
+                {/* Image Section - 1/3 of the page */}
+                <div className="w-full lg:w-1/3 relative flex flex-col items-center justify-center p-6">
                     <div className="w-full h-full relative overflow-hidden">
                         <img
                             src={images[currentImage]}
                             alt="Dynamic"
-                            className="w-full h-full object-cover transition-transform duration-500 transform scale-100 hover:scale-110"
+                            className="w-full h-full object-cover transition-transform duration-500 transform scale-100 hover:scale-110 max-w-[500px]"
                         />
                     </div>
-                    <div className="absolute bottom-10 top-12 left-0 right-0 p-6 bg-opacity-50 text-center text-white font-bold" style={{ top: "35rem" }}>
+                    {/* Centered Text */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white bg-opacity-50">
                         <p className="text-lg mb-2">At Alphaa Financial Solutions, we offer a comprehensive range of financial services. We have the expertise to guide you through the process.</p>
                         <p className="text-3xl">100+</p>
                         <p className="text-3xl">Simplify the loan</p>

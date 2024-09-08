@@ -29,13 +29,13 @@ const Header = () => {
     ];
 
     return (
-        <header className="text-gray-800 px-6 py-4 flex justify-between items-center relative">
-            {/* Desktop Logo */}
-            <div className="hidden md:flex text-2xl font-bold flex-shrink-0 flex items-center">
+        <header className="text-gray-800 px-6 py-4 flex justify-around items-center relative">
+            {/* Logo (on the left) */}
+            <div className="text-2xl font-bold flex-shrink-0 flex items-center">
                 <img src={logo} width="220" height="252" alt='logo' />
             </div>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle (on the right) */}
             <button
                 className="md:hidden text-2xl z-50"
                 onClick={toggleMobileMenu}
@@ -44,13 +44,13 @@ const Header = () => {
             </button>
 
             {/* Mobile Menu */}
-            <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 text-white transform ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:hidden z-40`}>
-                <div className="flex flex-col items-center mt-10 relative">
+            <div className={`fixed top-0 right-0 w-full md:w-1/2 h-full bg-gray-900 text-white transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-40`}>
+                <div className="flex flex-col items-start p-10 relative">
                     <button
                         className="absolute top-4 right-4 text-2xl"
                         onClick={toggleMobileMenu}
                     >
-                        <FaTimes className='text-white bg-white' />
+                        <FaTimes />
                     </button>
                     <div className="text-2xl font-bold flex-shrink-0 flex items-center mb-8">
                         <img src={logo} width="220" height="252" alt='logo' />
@@ -78,7 +78,6 @@ const Header = () => {
                         )}
                     </div>
                     <a href="/faqs" className="text-xl py-2" onClick={toggleMobileMenu}>FAQs</a>
-                    <a href="/contact" className="bg-gray-800 text-white py-2 px-4 rounded mt-4" onClick={toggleMobileMenu}>Contact Us</a>
                 </div>
             </div>
 
@@ -104,7 +103,7 @@ const Header = () => {
                     )}
                 </div>
                 <a href="/faqs" className="hover:text-gray-400">FAQs</a>
-            <a href="/contact" className="bg-gray-800 text-white py-2 px-4 hover:py-4 hover:px-6 rounded mt-4 " onClick={toggleMobileMenu}>Contact Us</a>
+                <a href="/contact" className="bg-gray-800 text-white py-2 px-4 hover:py-3 hover:px-5 rounded " onClick={toggleMobileMenu}>Contact Us</a>
             </nav>
         </header>
     );

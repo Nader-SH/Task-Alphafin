@@ -32,7 +32,7 @@ const ContactInfo = () => {
                     </div>
                     <IconsComponents />
                 </div>
-                <div className="flex-1 text-center m-4 flex justify-center">
+                <div className="flex-1 text-center m-4 flex justify-center min-w-[200px]">
                     <img src={contactImage} alt="Contact" className="w-full max-w-[500px] h-auto rounded-sm shadow-md" />
                 </div>
             </div>
