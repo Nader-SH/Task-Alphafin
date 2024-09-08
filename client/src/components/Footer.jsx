@@ -59,10 +59,12 @@ const Footer = () => {
                 </div>
                 <div className="flex justify-around text-center align-middle mt-8 border-t border-gray-700 pt-6 flex-wrap">
                     <IconsComponents />
+                    <div className='flex flex-wrap justify-center'>
                     <p className="col-lg-12 col-md-12 col-sm-12 col-xs-12 flex justify-center items-center">
                         2024 © All Rights Reserved | Developed with ❤️ by    
-                        <span className='text-orange-500 m-1'> Psyber Inc </span>
                     </p>
+                    <span className='text-orange-500 m-2'> Psyber Inc </span>
+                    </div>
                 </div>
             </div>
         </footer>
