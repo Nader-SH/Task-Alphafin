@@ -84,7 +84,7 @@ const OurServices = () => {
                 <div className="flex-1">
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                         {cardData.map((card, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-md m-4 border-b-4 border-orange-500 flex items-start">
+                            <div key={index} className="bg-white p-6  shadow-md m-4 border-b-4 rounded-lg border-orange-500 flex items-start">
                                 <div className="flex-1">
                                     <div className='flex font-bold mb-2 border-b-2'>
                                         <img src={card.icon} alt="icon" className="w-12 h-12 mr-4" />

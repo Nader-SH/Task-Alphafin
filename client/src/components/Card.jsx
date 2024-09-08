@@ -32,7 +32,7 @@ const PageCards = () => {
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    className={` absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                         }`}
                     style={{
                         backgroundImage: `url(${image})`, 
