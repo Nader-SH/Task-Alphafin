@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import imageshape from "../public/img-shape-02-1.png";
-import image1 from "../public/image1.jpg";
 import image2 from "../public/image2.jpg";
 import image3 from "../public/image3.jpg";
 import icon1 from "../public/icon1.png";
@@ -57,10 +56,8 @@ const cardData = [
 ];
 
 const images = [
-    image1,
     image2,
     image3,
-    // Add more image URLs as needed
 ];
 
 const OurServices = () => {
@@ -80,8 +77,8 @@ const OurServices = () => {
                 <img src={imageshape} height={80} width={80} alt="shape" className="m-6" />
                 <h2 className="text-center text-3xl font-bold">Our Services</h2>
             </div>
-            <div className="flex gap-6 flex-wrap">
-                <div className="flex-1">
+            <div className="flex flex-wrap min-w-[400px]">
+                <div className="flex-1 min-w-[300px]">
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                         {cardData.map((card, index) => (
                             <div key={index} className="bg-white p-6  shadow-md m-4 border-b-4 rounded-lg border-orange-500 flex items-start">
@@ -99,12 +96,12 @@ const OurServices = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative flex-1 flex flex-col items-center justify-center p-6">
+                <div className="relative flex-1 flex flex-col items-center justify-center p-6 min-w-[300px]">
                     <div className="w-full h-full relative overflow-hidden">
                         <img
                             src={images[currentImage]}
                             alt="Dynamic"
-                            className="w-full h-full object-cover transition-transform duration-500 transform hover:scale-110"
+                            className="w-full h-full object-cover transition-transform duration-500 transform scale-100 hover:scale-110"
                         />
                     </div>
                     <div className="absolute bottom-10 top-12 left-0 right-0 p-6 bg-opacity-50 text-center text-white font-bold" style={{ top: "35rem" }}>
